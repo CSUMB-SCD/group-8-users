@@ -1,4 +1,4 @@
-package edu.csumb.cst438.productservice.api;
+package edu.csumb.cst438.productservice.data;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import edu.csumb.cst438.productservice.api.products.Cart;
 import edu.csumb.cst438.productservice.api.products.Catagory;
 import edu.csumb.cst438.productservice.api.products.Manufacturer;
 import edu.csumb.cst438.productservice.api.products.Product;
+import edu.csumb.cst438.productservice.data.ProductRepository;
 
 @Component
 public class ProductDbSeeder implements CommandLineRunner{
@@ -31,6 +31,8 @@ public class ProductDbSeeder implements CommandLineRunner{
         productRepo.deleteAll();
         List<Product> products = Arrays.asList(ryzen3, ryzen5, ryzen7);
         productRepo.saveAll(products);
+
+        System.out.println(productRepo.findAll());
     }
 
 }

@@ -6,7 +6,6 @@
 	<groupId>edu.csumb.cst438</groupId>
 	<artifactId>ProjectService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
 
 	<name>ProjectService</name>
 	<description>Demo project for Spring Boot</description>
@@ -25,6 +24,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
+		</dependency>
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>

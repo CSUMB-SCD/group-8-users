@@ -1,4 +1,4 @@
-package edu.csumb.cst438.productservice.api;
+package edu.csumb.cst438.productservice.data;
 
 import java.util.List;
 

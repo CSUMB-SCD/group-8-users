@@ -1,15 +1,19 @@
-/*package edu.csumb.cst438.itemservice.data;
+package edu.csumb.cst438.productservice.data;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import edu.csumb.cst438.itemservice.api.items.Item;
+import edu.csumb.cst438.productservice.api.products.Product;
 
 @Repository
-public class ItemDbClient {
+public class ProductDbClient {
 
-    public List<Item> getItemData(){
-        return null;
+    @Autowired
+    ProductRepository repository;
+    
+    public List<Product> getAll(){
+        return repository.findAll();
     }
-}*/
+}
