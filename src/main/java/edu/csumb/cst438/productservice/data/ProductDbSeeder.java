@@ -1,4 +1,4 @@
-package edu.csumb.cst438.productservice.data;
+/*package edu.csumb.cst438.productservice.data;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,8 +14,9 @@ import edu.csumb.cst438.productservice.data.ProductRepository;
 
 @Component
 public class ProductDbSeeder implements CommandLineRunner{
+
     @Autowired
-    ProductRepository productRepo;
+	ProductRepository productRepo;
 
     @Override
     public void run(String... args) throws Exception {
@@ -31,8 +32,6 @@ public class ProductDbSeeder implements CommandLineRunner{
         productRepo.deleteAll();
         List<Product> products = Arrays.asList(ryzen3, ryzen5, ryzen7);
         productRepo.saveAll(products);
-
-        System.out.println(productRepo.findAll());
     }
 
-}
+}*/
