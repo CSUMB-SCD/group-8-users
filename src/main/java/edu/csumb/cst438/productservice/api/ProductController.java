@@ -3,6 +3,9 @@ package edu.csumb.cst438.productservice.api;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +19,6 @@ public class ProductController {
     @Autowired
     Manager manager;
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping ("/Product")
     @ResponseBody
     List<Product> getProducts(){
