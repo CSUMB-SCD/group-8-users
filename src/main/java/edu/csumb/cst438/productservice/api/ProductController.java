@@ -28,4 +28,9 @@ public class ProductController {
     String getTestString(){
         return "test";
     }
+
+    @GetMapping("/")
+    public String home() {
+        return "This is a trivial service that demonstrates how a Eureka Client can register with a Eureka Server";
+    }
 }
