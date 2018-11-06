@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import edu.csumb.cst438.productservice.data.ProductRepository;
 
+@EnableDiscoveryClient
 @EnableEurekaClient
 @SpringBootApplication
 public class ProductServiceApplication {
