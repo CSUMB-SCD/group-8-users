@@ -1,4 +1,4 @@
-/*package edu.csumb.cst438.productservice.data;
+package edu.csumb.cst438.productservice.data;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,4 +34,4 @@ public class ProductDbSeeder implements CommandLineRunner{
         productRepo.saveAll(products);
     }
 
-}*/
+}

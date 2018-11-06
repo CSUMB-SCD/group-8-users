@@ -22,4 +22,10 @@ public class ProductController {
     List<Product> getProducts(){
         return manager.getProductList();
     }
+
+    @GetMapping ("/test")
+    @ResponseBody
+    String getTestString(){
+        return "test";
+    }
 }
