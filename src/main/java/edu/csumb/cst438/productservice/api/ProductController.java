@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -22,6 +23,14 @@ public class ProductController {
     @GetMapping ("/Product")
     @ResponseBody
     List<Product> getProducts(){
+        return manager.getProductList();
+    }
+
+    @GetMapping ("/Product/{Catagory}")
+    @ResponseBody
+    List<Product> getProducts(
+            @PathVariable String catagory
+        ){
         return manager.getProductList();
     }
 
