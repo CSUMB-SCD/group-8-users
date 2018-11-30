@@ -1,4 +1,4 @@
-package edu.csumb.cst438.productservice.api;
+package edu.csumb.cst438.userservice.api;
 
 import java.util.List;
 
@@ -12,26 +12,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import edu.csumb.cst438.productservice.api.products.Product;
-import edu.csumb.cst438.productservice.business.Manager;
+import edu.csumb.cst438.userservice.api.entities.User;
+import edu.csumb.cst438.userservice.business.Manager;
 
 @RestController
-public class ProductController {
+public class UserController {
     @Autowired
     Manager manager;
 
-    @GetMapping ("/Product")
+    @GetMapping ("/User")
     @ResponseBody
-    List<Product> getProducts(){
-        return manager.getProductList();
+    List<User> getUsers(){
+        return manager.getUserList();
     }
 
     @GetMapping ("/Product/{Catagory}")
     @ResponseBody
-    List<Product> getProducts(
+    List<User> getUsers(
             @PathVariable String catagory
         ){
-        return manager.getProductList();
+        return manager.getUserList();
     }
 
     @GetMapping ("/test")
