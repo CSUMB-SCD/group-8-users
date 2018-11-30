@@ -25,7 +25,7 @@ public class UserDbSeeder implements CommandLineRunner{
 
 
         // delete db data
-        userRepo.deleteAll();
+        //userRepo.deleteAll();
         // add db seed
         List<User> users = Arrays.asList(admin1,admin2,admin3);
         userRepo.saveAll(users);
