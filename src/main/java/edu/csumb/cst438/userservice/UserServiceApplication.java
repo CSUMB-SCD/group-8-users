@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 
 import edu.csumb.cst438.userservice.data.UserRepository;
 
-// @EnableDiscoveryClient
-// @EnableEurekaClient
+@EnableDiscoveryClient
+@EnableEurekaClient
 @SpringBootApplication
 public class UserServiceApplication {
 	
