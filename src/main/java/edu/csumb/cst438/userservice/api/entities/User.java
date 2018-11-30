@@ -5,13 +5,14 @@ import org.springframework.data.annotation.Id;
 public class User {
     
     @Id
-    private int id;
+    private String id;
 
 
     private String username;
     private String password;
     private double credit;
 
+    public User() {}
 
     public User(String username, String password, double d){
         // this.id = id;
@@ -25,7 +26,7 @@ public class User {
     /**
      * @return the id
      */
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -74,7 +75,7 @@ public class User {
     /**
      * @param id the id to set
      */
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
