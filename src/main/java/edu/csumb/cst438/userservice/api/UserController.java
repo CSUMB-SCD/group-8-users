@@ -20,24 +20,11 @@ public class UserController {
     @Autowired
     Manager manager;
 
+    @CrossOrigin
     @GetMapping ("/User")
     @ResponseBody
     List<User> getUsers(){
         return manager.getUserList();
-    }
-
-    @GetMapping ("/Product/{Catagory}")
-    @ResponseBody
-    List<User> getUsers(
-            @PathVariable String catagory
-        ){
-        return manager.getUserList();
-    }
-
-    @GetMapping ("/test")
-    @ResponseBody
-    String getTestString(){
-        return "test";
     }
 
     @GetMapping("/")
