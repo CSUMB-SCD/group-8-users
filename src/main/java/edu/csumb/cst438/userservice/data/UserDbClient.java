@@ -1,19 +1,19 @@
-package edu.csumb.cst438.productservice.data;
+package edu.csumb.cst438.userservice.data;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import edu.csumb.cst438.productservice.api.products.Product;
+import edu.csumb.cst438.userservice.api.entities.User;
 
 @Repository
-public class ProductDbClient {
+public class UserDbClient {
 
     @Autowired
-    ProductRepository repository;
+    UserRepository repository;
     
-    public List<Product> getAll(){
+    public List<User> getAll(){
         return repository.findAll();
     }
 }
