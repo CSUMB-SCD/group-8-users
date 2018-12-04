@@ -1,10 +1,14 @@
 package edu.csumb.cst438.userservice.api;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,6 +25,18 @@ public class UserController {
     @ResponseBody
     List<User> getUsers() {
         return manager.getUserList();
+    }
+
+    @CrossOrigin
+    @RequestMapping(value="/validate", method = RequestMethod.POST)
+    public User validate(@RequestBody User payload) throws Exception {
+        return manager.validate(payload);
+    }
+
+    @CrossOrigin
+    @RequestMapping(value="/setCredits", method = RequestMethod.POST)
+    public Boolean removeStock(@RequestBody User payload) throws Exception {
+        return manager.setCredits(payload);
     }
 
     @GetMapping("/")

@@ -16,4 +16,20 @@ public class Manager{
     public List<User> getUserList(){
         return userDbClient.getAll();
     }
+
+    public User validate(User payload){
+        User result = new User();
+        for (User user: userDbClient.getAll()) {
+            if (user.getPassword().equals(payload.getPassword())
+             && user.getUsername().equals(payload.getUsername())) {
+                result = user;
+                break;
+            }
+        }
+        return result;
+    }
+
+    public Boolean setCredits(User payload){
+        return userDbClient.save(payload);
+    }
 }

@@ -21,7 +21,7 @@ public class UserDbSeeder implements CommandLineRunner{
     public void run(String... args) throws Exception {
         User admin1 = new User("admin1", "admin1", 9.2);
         User admin2 = new User("admin2", "admin2", 43.2);
-        User admin3 = new User( "admin3", "admin3", 24.5);
+        User admin3 = new User("admin3", "admin3", 24.5);
 
 
         // delete db data

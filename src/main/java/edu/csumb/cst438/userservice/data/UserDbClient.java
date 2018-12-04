@@ -16,4 +16,9 @@ public class UserDbClient {
     public List<User> getAll(){
         return repository.findAll();
     }
+
+	public boolean save(User newUser) {
+        repository.save(newUser);
+		return true;
+	}
 }
